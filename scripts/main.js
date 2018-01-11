@@ -1,25 +1,3 @@
-/* let monBouton = document.querySelector('button');
-let mesElements = document.querySelector('cestmagique');
-
-function afficheElementsCentraux() {
-  let mesElements = prompt('Veuillez saisir votre nom.');
-  localStorage.setItem('nom', mesElements);
-  monTitre.textContent = 'Mozilla est cool, ' + mesElements;
-}
-
-if(!localStorage.getItem('nom')) {
-  définirNomUtilisateur();
-} else {
-  let nomEnregistré = localStorage.getItem('nom');
-  monTitre.textContent = 'Mozilla est cool, ' + nomEnregistré;
-}
-
-monBouton.onclick = function() {
-  définirNomUtilisateur();
-}
-
-monBouton.onclick = document.getElementById('cestmagique').style.display='block' */
-
 /* Script pour charger contenu central en cliquant sur un bouton */
 function afficherElementsCentraux() {
     document.getElementById("cestmagique").style.display='block';
@@ -40,13 +18,16 @@ function saisirMotsCles() {
     document.getElementById("formrech").submit();
 } */
 
+/* On récupère la requête et on affiche la page de résultat. Mais bon, ça buggue pour l'instant. */
 function rechercherSurGoogle() {
     let maRecherche = document.formrech.recherchebox.value;
     /* alert(maRecherche); */
-    let rechercheuser = 'https://www.google.fr/#q= + maRecherche';
+    /* let adresseGoogle = "https://www.google.fr/#q="; */
+    let requeteUser = "https://www.google.fr/#q=" + maRecherche;
+    /* alert(requeteUser); */
     /* localStorage.setItem('rechercheuser', maRecherche);
     self.location='https://www.google.fr/#q= + maRecherche'; */
-    document.location.href = 'rechercheuser';
+    document.location.href = 'requeteUser';
 }
 
 /* <form>
