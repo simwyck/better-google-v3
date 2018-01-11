@@ -1,0 +1,68 @@
+<!-- Désolé pour la mise en page pas terrible mais je n'ai pas eu le temps de peaufiner depuis hier :( -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Better Google</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="favicon.ico" />
+</head>
+
+<!-- Le onload dans le body permet d'afficher le popup -->
+<body onload="setTimeout(afficherPopup, 3000)">
+
+<nav>
+  <ul id=navigation>
+    <li><a href="#" class="lien-nav">E-mail</a> &nbsp</li>
+    <li><a href="#" class="lien-nav">Images</a> &nbsp</li>
+    <li><img src="img/carre.png" /> &nbsp</li>
+    <!--<li><button type="button">Connexion</button> &nbsp<li>-->
+    <li><a href="#" class="connexion">Connexion</a></li>
+  </ul>
+</nav>
+
+<!-- Si tu cliques sur le bouton, le form de recherche et le logo s'affiche. C'est magique, non ? -->
+<section id="cestmagique">
+
+<div id="logo"><img src="img/google-logo.png" alt="logo Google" title="Better Google" /></div>
+
+<div>
+  <form name="formrech">
+    <input id="recherche" name="recherchebox" type="text">
+    <div id="boutons">
+      <button type="submit" onclick="rechercherSurGoogle()">Recherche Google</button> <button type="button">J'ai de la chance</button>
+    </div>
+  </form>
+</div>
+
+</section>
+
+<!-- Ci-dessous, le fameux bouton -->
+<button type="button" onclick="afficherElementsCentraux()">AFFICHER LES ÉLÉMENTS CENTRAUX</button>
+
+<footer>
+  <div id="base">
+
+    <ul class="listBas">
+      <li>France</li>
+    </ul>
+
+    <ul class="listBas">
+      <li><a class="lien-footer" href="https://www.google.fr/intl/fr_fr/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" >Publicité</a></li>
+      <li><a class="lien-footer" href=""> Entreprise </a></li>
+      <li><a class="lien-footer" href=""> A propos</a></li>
+      <li style="float:right"><a class="lien-footer" href="#"> Confidentialité </a></li>
+      <li style="float:right"><a class="lien-footer" href="#"> Conditions </a></li>
+      <li style="float:right"><a class="lien-footer" href="#"> Paramètres </a></li>
+      <li style="float:right"><a class="lien-footer" href="#"> Utiliser Google.com </a></li>
+    </ul>
+
+  </div>
+
+</footer>
+
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
